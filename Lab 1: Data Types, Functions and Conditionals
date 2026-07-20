@@ -1,0 +1,55 @@
+# Lab 1: Data Types, Functions and Conditionals
+
+
+#### Exercise 0
+
+print('Hello World')
+print('Welcome')
+print('a')
+
+
+#### Exercise 1
+
+## Return the gross pay for an employee based on the hourly rate and the amount
+## of hours they workes.
+def get_gross_pay(hours, rate_per_hour):
+  pay = hours * rate_per_hour
+  return pay
+
+print(get_gross_pay(3, 10))
+
+assert get_gross_pay(3, 10) == 30
+
+
+#### Exercise 2
+
+width = 17
+height = 12.0
+
+value_1 = width // 2
+print(value_1, type(value_1))
+
+value_2 = width / 2
+print(value_2, type(value_2))
+
+value_3 = height / 3
+print(value_3, type(value_3))
+
+value_4 = 1 + 2 * 5
+print(value_4, type(value_4))
+
+
+#### Exercise 3
+
+## Return the gross pay for an employee based on the hourly rate and the amount
+## of hours they workes. Hours over 40 are worth 1.5 times more.
+
+def get_gross_pay(hours, rate_per_hour):
+  if hours > 40:
+    pay = (40 * rate_per_hour) + (hours - 40) * 1.5 * rate_per_hour
+  else:
+    pay = hours * rate_per_hour
+  return pay
+
+assert get_gross_pay(0, 1000) == 0
+assert get_gross_pay(2, 10) == 20
